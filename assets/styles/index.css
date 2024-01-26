@@ -9,6 +9,20 @@
     border-radius: 10px;
   }
 }
-/* .login-content {
-  width: 100%;
-} */
+
+@media only screen and (min-width: 2000px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nav-bar {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+.post-body {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

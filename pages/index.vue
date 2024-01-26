@@ -1,6 +1,29 @@
-<script setup>
+<script>
+import userStore from "../stores/userStore";
+
 const username = ref("");
 const password = ref("");
+const users = userStore.state.users;
+
+export default {
+  data() {
+    return {
+      username,
+      password,
+    };
+  },
+  methods: {
+    getUser: async () => {
+      userStore.dispatch("addUser", { username });
+      await navigateTo("/homepage");
+    },
+  },
+  computed: {
+    users() {
+      return userStore.state.users;
+    },
+  },
+};
 </script>
 
 <template>
@@ -27,7 +50,8 @@ const password = ref("");
         <button
           type="button"
           class="border border-[#f3f3f3] rounded-md mt-3 bg-[#4875B4] text-white hover:opacity-80 outline-none p-2 w-full"
-          @click="() => console.log(username, password, '>>>>')"
+          @click="getUser"
+          :disabled="!username || !password"
         >
           Sign in
         </button>
