@@ -13,7 +13,7 @@ defineProps(["title", "author", "body"]);
           {{ body }}
         </p>
         <p class="font-semibold text-sm opacity-70">
-          By <i>{{ author }}</i>
+          {{ $t("by") }} <i>{{ author }}</i>
         </p>
       </div>
     </Card>

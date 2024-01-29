@@ -15,7 +15,7 @@ export default {
 <template lang="html">
   <Wrapper>
     <div class="p-5">
-      <h2 class="font-semibold text-lg">Posts</h2>
+      <h2 class="font-semibold text-lg">{{ $t("posts-title") }}</h2>
       <div class="w-full h-[67vh] overflow-y-scroll pl-5 pr-5 hide-scrollbar">
         <ul class="list-none">
           <li v-for="post in posts">

@@ -30,3 +30,12 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+@media only screen and (max-width: 400px) {
+  .header-btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-btn select {
+    margin-left: 0;
+  }
+}

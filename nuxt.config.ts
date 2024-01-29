@@ -10,8 +10,9 @@ export default defineNuxtConfig({
   css: ["~/assets/styles/index.css"],
   modules: ["@nuxtjs/i18n"],
   i18n: {
-    locales: ["en-CA", "ar-EG"],
-    defaultLocale: "en-CA",
+    locales: ["en", "fr"],
+    defaultLocale: "fr",
     detectBrowserLanguage: false,
+    vueI18n: "./i18n.config.ts",
   },
 });

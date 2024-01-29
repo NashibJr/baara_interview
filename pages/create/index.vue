@@ -27,16 +27,18 @@ export default {
   <Wrapper>
     <div class="sm:flex flex-col justify-center items-center">
       <form class="sm:w-3/4 lg:w-1/2 w-full" @submit="createPost">
-        <h2 class="font-semibold text-2xl mt-8">Create Post</h2>
+        <h2 class="font-semibold text-2xl mt-8">
+          {{ $t("create-btn-label") }}
+        </h2>
         <input
           type="text"
           v-model="title"
-          placeholder="Title"
+          :placeholder="$t('title-post')"
           class="border border-[#f3f3f3] rounded-md mt-3 outline-none p-2 w-full"
         />
         <textarea
           v-model="content"
-          placeholder="Content"
+          :placeholder="$t('textarea-content')"
           rows="8"
           cols="80"
           class="border border-[#f3f3f3] rounded-md mt-3 outline-none p-2 w-full"
@@ -48,7 +50,7 @@ export default {
           @click="createPost"
           :disabled="!title || !content"
         >
-          Submit
+          {{ $t("btn-submit") }}
         </button>
         <button
           type="button"
@@ -56,7 +58,7 @@ export default {
           class="ml-2 w-[100px] h-[40px] pb-1 hover:opacity-90 mt-3 sm:w-[100px] text-white font-semibold bg-[#3d3d3d] rounded-lg"
           @click="() => navigateTo('/')"
         >
-          cancel
+          {{ $t("btn-cancel") }}
         </button>
       </form>
     </div>
