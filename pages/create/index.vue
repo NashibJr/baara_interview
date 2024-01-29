@@ -27,9 +27,19 @@ export default {
   <Wrapper>
     <div class="sm:flex flex-col justify-center items-center">
       <form class="sm:w-3/4 lg:w-1/2 w-full" @submit="createPost">
-        <h2 class="font-semibold text-2xl mt-8">
-          {{ $t("create-btn-label") }}
-        </h2>
+        <div class="flex justify-between">
+          <h2 class="font-semibold text-2xl mt-8">
+            {{ $t("create-btn-label") }}
+          </h2>
+          <ul class="flex ml-3 mt-5">
+            <li class="m-1 hover:text-[dodgerblue] font-bold">
+              <a href="/fr/create">Fr</a>
+            </li>
+            <li class="m-1 hover:text-[dodgerblue] font-bold">
+              <a href="/create">Eng</a>
+            </li>
+          </ul>
+        </div>
         <input
           type="text"
           v-model="title"

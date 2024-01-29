@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   postcss: {
@@ -11,7 +10,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/i18n"],
   i18n: {
     locales: ["en", "fr"],
-    defaultLocale: "fr",
+    defaultLocale: "en",
     detectBrowserLanguage: false,
     vueI18n: "./i18n.config.ts",
   },

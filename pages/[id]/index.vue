@@ -8,7 +8,7 @@ const post = postStore.getters.getOnePost(id);
 
 <template>
   <Wrapper>
-    <h2 class="font-semibold text-2xl mt-8">Post Details</h2>
+    <h2 class="font-semibold text-2xl mt-8">{{ $t("post-details") }}</h2>
     <div class="mt-5">
       <h2 class="font-semibold text-lg">{{ post.title }}</h2>
       <p class="mt-2 opacity-70">{{ post.body }}</p>

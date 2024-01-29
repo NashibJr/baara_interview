@@ -1,11 +1,3 @@
-<script>
-export default {
-  methods: {
-    handleChange: (event) => localStorage.setItem("lang", event.target.value),
-  },
-};
-</script>
-
 <template lang="html">
   <header>
     <nav class="pb-3 nav-bar w-full flex justify-between">
@@ -18,7 +10,7 @@ export default {
         />
         <p class="font-semibold text-xl mt-3 ml-2">{{ $t("title") }}</p>
       </span>
-      <div class="header-btn">
+      <div class="header-btn flex">
         <button
           type="button"
           name="button"
@@ -27,13 +19,6 @@ export default {
         >
           {{ $t("create-btn-label") }}
         </button>
-        <select
-          class="border border-[#d3d3d3] rounded-md p-2 outline-none ml-2 translate-y-1 w-[100px]"
-          @change="handleChange($event)"
-        >
-          <option value="Eng">Eng</option>
-          <option value="Fr">Fr</option>
-        </select>
       </div>
     </nav>
   </header>
