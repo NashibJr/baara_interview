@@ -26,3 +26,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
